@@ -13,7 +13,7 @@ class Song < ActiveRecord::Base
     d = Artist.find_by(name: 'Drake')
     binding.pry
     if !d
-      self.artist = Artist.new(name: 'Drake')
+      self.artist = Artist.create(name: 'Drake')
     else
       self.artist = d
     end
